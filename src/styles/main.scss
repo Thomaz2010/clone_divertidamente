@@ -1,5 +1,323 @@
-$bgColor: rgb(37, 39, 161);
+@font-face {
+    font-family: Avenir;
+    src: url(/fonts/Avenir-Bold.woff2);
+    font-weight: 400;
+}
 
 body {
-    background-color: $bgColor;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff8f8;
+}
+
+.header {
+    background-color: #37479F;
+    color: aliceblue;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-style: groove;
+    border-color: #8FD28D;
+}
+
+.header__title {
+    margin: 0;
+    font-family: "Luckiest Guy", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 6.8em;
+    background: linear-gradient(90deg, #f1c40f, #8e44ad, #3498db, #1abc9c, #f1c40f, #e67e22, #e74c3c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    letter-spacing: -3px;
+}
+
+.header__description {
+    margin: 0;
+    font-size: 2.8em;
+    font-family: "Avenir", sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: 4% auto;
+    padding: 20px;
+}
+
+.hero {
+    background-image: url('/src/styles/images/maxresdefault.jpg');
+    background-size: cover;
+    background-position: center bottom;
+    height: 700px;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 300px;
+    margin-top: 120px;
+}
+
+.synopsis, .characters, .trailer, .cta {
+    margin-bottom: 40px;
+}
+
+.synopsis__title, .characters__title, .trailer__title, .cta__title {
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #f1c40f, #8e44ad, #3498db, #1abc9c, #f1c40f, #e67e22, #e74c3c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    letter-spacing: -2px;
+    text-align: center;
+    font-size: 3.8em;
+    font-family: "Luckiest Guy", cursive;
+}
+
+.synopsis__text {
+    font-size: 2.2em;
+    line-height: 1.6em;
+    font-family: "Avenir", sans-serif;
+}
+
+.characters__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.character {
+    width: 30%;
+    text-align: center;
+    margin: 10px;
+    box-sizing: border-box;
+    font-family: "Avenir", sans-serif;
+}
+
+.character__image {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.character__name {
+    font-size: 2.1em;
+    font-family: 'Avenir', sans-serif;
+    margin-top: 10px;
+}
+
+.trailer__video {
+    width: 100%;
+    height: 550px;
+    border: none;
+}
+
+.cta {
+    text-align: center;
+    justify-content: center;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    background: url('/src/styles/images/cta-background.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.cta__button {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    background-color: #ff6f61;
+    border-radius: 5px;
+}
+
+.footer {
+    text-align: center;
+    padding: 80px;
+    background-color: #37479F;
+    color: white;
+}
+
+.footer__text {
+    font-size: 25px;
+    margin: 0;
+}
+
+.pixar {
+    width: 100%;
+    height: 550px;
+    border: none;
+    text-align: center;
+    margin-top: 10%;
+}
+
+.pixar__title {
+    background: linear-gradient(90deg, #f1c40f, #8e44ad, #3498db, #1abc9c, #f1c40f, #e67e22, #e74c3c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    letter-spacing: -2px;
+    text-align: center;
+    font-size: 3.8em;
+    font-family: "Luckiest Guy", cursive;
+    margin-top: -10%;
+}
+
+.pos {
+    background: linear-gradient(90deg, #f1c40f, #8e44ad, #3498db, #1abc9c, #f1c40f, #e67e22, #e74c3c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    letter-spacing: -2px;
+    text-align: center;
+    font-size: 3.1em;
+    font-family: "Luckiest Guy", cursive;
+   
+}
+
+/* Tablets (telas médias) */
+@media (max-width: 1024px) {
+    .header__title {
+        font-size: 2em;
+    }
+
+    .header__description{
+        font-size: 1em;
+    }
+
+    .synopsis__title, .characters__title, .trailer__title, .cta__title, .pixar__title, .pos {
+        font-size: 1em;
+    }
+
+    .synopsis__text {
+        font-size: 1em;
+    }
+
+    .trailer__video {
+        height: 400px;
+    }
+
+    .hero {
+        
+        height: 300px;
+        padding-bottom: -100px;
+        margin-top: -3%;
+       
+       
+    }
+
+    .character {
+        width: 45%;
+    }
+}
+
+/* Smartphones (telas pequenas) */
+@media (max-width: 768px) {
+    .header__title {
+        font-size: 4em;
+        text-align: justify;
+    }
+
+    .header__description{
+        text-align: justify;
+    }
+
+    .synopsis__title, .characters__title, .trailer__title, .cta__title, .pixar__title, .pos {
+        font-size: 2.5em;
+        
+    }
+
+    .synopsis__text {
+        font-size: 1.5em;
+    }
+
+    .trailer__video {
+        height: 300px;
+       
+    }
+
+    .hero {
+        padding-right:300px;
+        height: 400px;
+        padding-bottom:400px;
+        width: 175%;
+    }
+
+    .character {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .character {
+       width:100px;
+    }
+    .cta {
+        width: 90%;
+        margin: 0 auto;
+        padding: 50px 20px;
+        background-size: contain; /* Ajusta a imagem para caber dentro do contêiner */
+    }
+}
+
+/* Telas muito pequenas (menos de 480px) */
+@media (max-width: 480px) {
+    .header__title {
+        font-size: 3em;
+        
+    }
+
+    .synopsis__title, .characters__title, .trailer__title, .cta__title, .pixar__title, .pos {
+        font-size: 2em;
+        text-align: center;
+    }
+
+    .synopsis__text {
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    .trailer__video {
+        
+        height: 200px;
+    }
+
+    .hero {
+        width: 100%;
+        height: 300px;
+        padding-bottom: 50px;
+        margin-top: 80px;
+    }
+
+    .character {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .cta {
+        width: 90%;
+        margin: 0 auto;
+        padding: 30px 10px;
+        background-size: contain; /* Ajusta a imagem para caber dentro do contêiner */
+    }
+
+    .pos {
+        width: 100%;
+
+    }
+
+    .footer{
+        width: 100%;
+    }
 }
